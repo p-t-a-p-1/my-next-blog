@@ -9,7 +9,7 @@ const AppPageTitle: React.FC<AppPageTitleProps> = (props) => {
   return (
     <Heading
       as='h1'
-      py={{ base: '4rem', md: '8rem' }}
+      py={{ base: '2.4rem', md: '8rem' }}
       fontSize={{ base: '2.4rem', md: '4rem' }}
       fontWeight='bold'
       letterSpacing='0.08em'

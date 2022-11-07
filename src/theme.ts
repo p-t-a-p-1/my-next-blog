@@ -6,8 +6,8 @@ export default {
   // },
   colors: {
     theme: {
-      main: 'cyan',
-      sub: '#1530b6',
+      main: '#1530b6',
+      sub: 'cyan',
     },
     text: {
       headline: '#1C1F21',

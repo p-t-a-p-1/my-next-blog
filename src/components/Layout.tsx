@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
   <Flex flexDirection='column' minH='100vh' background='theme.main'>
     <Flex
       as='header'
-      px='40px'
+      px={{ base: '1.6rem', md: '4rem' }}
       py='16px'
       justify='space-between'
       align='center'
@@ -50,13 +50,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
         </NextLink>
       </Heading>
       <Box as='nav'>
-        <Flex columnGap='32px'>
+        <Flex columnGap={{ base: '1.6rem', md: '3.2rem' }}>
           {HEADER_LINKS.map((item, index) => (
             <NextLink href={item.path} key={`headerItem-${index}`} legacyBehavior passHref>
               <Link _hover={{ textDecoration: 'none' }} isExternal={item.isExternal}>
                 <Flex
                   align='center'
-                  columnGap='8px'
+                  columnGap='0.8rem'
                   fontWeight='bold'
                   transition='color 0.3s ease-in-out'
                   position='relative'
@@ -91,7 +91,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
         </Flex>
       </Box>
     </Flex>
-    <Box as='main' pt='75px' flex='1 0 auto' maxW='1000px' mx='auto' w='full' px='40px'>
+    <Box
+      as='main'
+      pt='8rem'
+      flex='1 0 auto'
+      maxW='100rem'
+      mx='auto'
+      w='full'
+      px={{ base: '1.6rem', md: '4rem' }}
+    >
       {children}
     </Box>
   </Flex>
