@@ -6,6 +6,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import NextLink from 'next/link'
 import { Item } from '.'
 import AppHead from '@/components/common/AppHead'
+import usePageConfig from '@/hooks/usePageConfig'
 import { client } from '@/libs/client'
 import Style from '@/styles/markdownStyle'
 import 'highlight.js/styles/hybrid.css'
@@ -18,6 +19,10 @@ type Data = {
 
 const BlogDetail: NextPage<Data> = (props) => {
   const { data, highlightedBody } = props
+
+  usePageConfig({
+    title: `blog / ${data.slug}`,
+  })
 
   return (
     <>

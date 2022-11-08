@@ -6,6 +6,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import NextLink from 'next/link'
 import AppHead from '@/components/common/AppHead'
 import AppPageTitle from '@/components/common/AppPageTitle'
+import usePageConfig from '@/hooks/usePageConfig'
 import { client } from '@/libs/client'
 
 type Sys = {
@@ -48,6 +49,9 @@ export type Item = {
 }
 
 const BlogIndex: NextPage<Contents<Item>> = (props) => {
+  usePageConfig({
+    title: 'blog',
+  })
   return (
     <>
       <AppHead title='記事一覧' />

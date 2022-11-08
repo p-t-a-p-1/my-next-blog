@@ -2,6 +2,7 @@ import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 import AppHead from '@/components/common/AppHead'
 import AppPageTitle from '@/components/common/AppPageTitle'
+import usePageConfig from '@/hooks/usePageConfig'
 
 type ProfileItemProps = {
   name: string
@@ -29,6 +30,9 @@ const ProfileItem: React.FC<ProfileItemProps> = ({ name, value }) => (
 )
 
 export default function Home() {
+  usePageConfig({
+    title: '',
+  })
   return (
     <>
       <AppHead />

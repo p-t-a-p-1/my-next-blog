@@ -1,3 +1,32 @@
+const COLOR_SET = [
+  {
+    main: '#1530b6',
+    sub: 'cyan',
+  },
+  {
+    main: '#1d17a0',
+    sub: 'hotpink',
+  },
+  {
+    main: '#2d1791',
+    sub: 'springgreen',
+  },
+  {
+    main: '#0e11c9',
+    sub: 'orange',
+  },
+  {
+    main: '#554252',
+    sub: 'cyan',
+  },
+  {
+    main: '#130841',
+    sub: 'red',
+  },
+]
+
+const randomIndex = Math.floor(Math.random() * COLOR_SET.length)
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   // fonts: {
@@ -6,8 +35,8 @@ export default {
   // },
   colors: {
     theme: {
-      main: '#1530b6',
-      sub: 'cyan',
+      main: COLOR_SET[randomIndex].main,
+      sub: COLOR_SET[randomIndex].sub,
     },
     text: {
       headline: '#1C1F21',

@@ -27,6 +27,7 @@ const AppHead: NextPage<MyHeadProps> = ({ title, thumbnailUrl, description }) =>
   return (
     <Head>
       <title>{title}</title>
+      <meta property='description' content={description} />
       <meta property='og:title' content={title} />
       <meta property='og:site_name' content='ptap1' />
       <meta property='og:type' content='website' />
