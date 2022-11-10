@@ -1,12 +1,15 @@
 import { atom } from 'recoil'
 
 export type PageConfigType = {
-  title?: string
+  pankuzu?: {
+    label: string
+    path: string
+  }[]
 }
 
 export const pageConfigState = atom<PageConfigType>({
   key: 'pageConfig',
   default: {
-    title: '',
+    pankuzu: [],
   },
 })

@@ -21,7 +21,16 @@ const BlogDetail: NextPage<Data> = (props) => {
   const { data, highlightedBody } = props
 
   usePageConfig({
-    title: `blog / ${data.slug}`,
+    pankuzu: [
+      {
+        label: 'blog',
+        path: '/blog',
+      },
+      {
+        label: data.slug,
+        path: `/blog/${data._id}`,
+      },
+    ],
   })
 
   return (

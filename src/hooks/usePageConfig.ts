@@ -9,12 +9,12 @@ const usePageConfig = (pageConfigOption: PageConfigType) => {
   const setPageConfig = useSetRecoilState<PageConfigType>(pageConfigState)
   useEffect(() => {
     setPageConfig({
-      title: pageConfigOption.title || '',
+      pankuzu: pageConfigOption.pankuzu || [],
     })
 
     return () => {
       setPageConfig({
-        title: '',
+        pankuzu: [],
       })
     }
   }, [pageConfigOption, setPageConfig])

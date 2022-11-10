@@ -31,7 +31,7 @@ const ProfileItem: React.FC<ProfileItemProps> = ({ name, value }) => (
 
 export default function Home() {
   usePageConfig({
-    title: '',
+    pankuzu: [],
   })
   return (
     <>

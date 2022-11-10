@@ -50,7 +50,12 @@ export type Item = {
 
 const BlogIndex: NextPage<Contents<Item>> = (props) => {
   usePageConfig({
-    title: 'blog',
+    pankuzu: [
+      {
+        label: 'blog',
+        path: '/blog',
+      },
+    ],
   })
   return (
     <>
